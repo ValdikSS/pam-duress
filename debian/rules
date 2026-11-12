@@ -17,6 +17,7 @@ override_dh_auto_install:
 	install -D -m755 bin/pam_test debian/libpam-duress-bin/usr/bin/pam_test
 	install -D -m755 bin/duress_sign debian/libpam-duress-bin/usr/bin/duress_sign
 	install -D -m644 bin/pam_duress.so debian/libpam-duress/usr/lib/$(DEB_HOST_MULTIARCH)/security/pam_duress.so
+	install -D debian/pam-configs/duress debian/libpam-duress/usr/share/pam-configs/duress
 
 #override_dh_install:
 #	dh_install --list-missing -X.pyc -X.pyo
