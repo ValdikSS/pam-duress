@@ -24,7 +24,7 @@ int pam_sm_close_session(pam_handle_t *pamh, int flags, int argc,
 
 int pam_sm_acct_mgmt(pam_handle_t *pamh, int flags, int argc,
                      const char **argv) {
-  return (PAM_SUCCESS);
+  return (PAM_IGNORE);
 }
 
 int is_valid_duress_file(const char *filepath, const char *pam_pass,
@@ -290,7 +290,7 @@ int pam_sm_setcred(pam_handle_t *pamh, int flags, int argc, const char **argv) {
 /* PAM entry point for authentication token (password) changes */
 int pam_sm_chauthtok(pam_handle_t *pamh, int flags, int argc,
                      const char **argv) {
-  return (PAM_SUCCESS);
+  return (PAM_IGNORE);
 }
 
 pid_t run_shell_as(const char *pam_user, const char *run_as_user, char *script) {
